@@ -1,0 +1,22 @@
+#!/bin/false
+
+# basic info
+FS_FANCYNAME="Alpine Linux"
+FS_HAS_OOBE="false"
+FS_INST_PKG="/sbin/apk add"
+FS_UPDATE="/sbin/apk update"
+FS_USERGROUPS="wheel,video,audio,input"
+
+# packages
+FS_PKGS_CD_BASE="--virtual bash bash-completion f2fs-tools git networkmanager sudo vim cgpt parted wget build-dependencies"
+FS_PKGS_CD_UI_BASE=""
+# bootloader
+FS_PKGS_CD_BOOTFW_UBOOT="u-boot-tools"
+FS_PKGS_CD_BOOTFW_DEPTHCHARGE="$FS_PKGS_CD_BOOTFW_UBOOT vboot-utils"
+
+# ui
+FS_SUPPORTED_UIS="kde gnome sway"
+#FS_PKGS_CD_UI_GNOME="pipewire pipewire-media-session"
+FS_PKGS_CD_UI_KDE="plasma elogind polkit-elogind dbus"
+#FS_PKGS_CD_UI_PHOSH="xfce4-terminal phosh phosh-tablet xwayland"
+FS_PKGS_CD_UI_SWAY="sway i3status dmenu xwayland grim slurp brightnessctl foot"
