@@ -271,6 +271,12 @@ if [ "$FS_HAS_OOBE" = "false" ]; then
 					;;
 				kde)
 					$chroot $DESTDIR $FS_INST_PKG $FS_PKGS_CD_UI_KDE
+					if [ "$ROOTFS" = "alpine" ]; then
+						$chroot $DESTDIR $qemu /sbin/rc-update add dbus
+						$chroot $DESTDIR $qemu /sbin/rc-update add elogind
+						$chroot $DESTDIR $qemu /sbin/rc-update add polkit	
+						$chroot $DESTDIR $qemu /sbin/rc-update add udev
+						$chroot $DESTDIR $qemu /sbin/rc-update add sddm
 					;;
 			esac
 			cp -r $CADMIUMROOT/fs/ucm/* $DESTDIR/usr/share/alsa/ucm2/conf.d/
