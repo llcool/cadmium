@@ -33,8 +33,8 @@ mount -o bind /sys $DESTDIR/sys
 echo -e 'nameserver 1.1.1.1\nnameserver 1.0.0.1\nnameserver 8.8.8.8\nnameserver 8.8.4.4' > $DESTDIR/etc/resolv.conf
 
 $chroot $DESTDIR $qemu /sbin/apk update
-$chroot $DESTDIR $qemu /sbin/apk add networkmanager
-$chroot $DESTDIR $qemu /sbin/rc-update add NetworkManager
+$chroot $DESTDIR $qemu /sbin/apk add networkmanager networkmanager-wifi
+$chroot $DESTDIR $qemu /sbin/rc-update add networkmanager 
 $chroot $DESTDIR $qemu /sbin/rc-update add devfs sysinit
 $chroot $DESTDIR $qemu /sbin/rc-update add dmesg sysinit
 $chroot $DESTDIR $qemu /sbin/rc-update add mdev sysinit

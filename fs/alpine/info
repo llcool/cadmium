@@ -5,7 +5,7 @@ FS_FANCYNAME="Alpine Linux"
 FS_HAS_OOBE="false"
 FS_INST_PKG="/sbin/apk add"
 FS_UPDATE="/sbin/apk update"
-FS_USERGROUPS="wheel,video,audio,input"
+FS_USERGROUPS="wheel,video,audio,input,plugdev"
 
 # packages
 FS_PKGS_CD_BASE="--virtual bash bash-completion f2fs-tools git networkmanager sudo vim cgpt parted wget build-dependencies"
