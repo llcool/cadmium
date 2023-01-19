@@ -20,7 +20,7 @@ FILESYSTEM=f2fs
 # Debian and debian-ish distro suite (Not for arch)
 # sid, testing, stable
 # impish, hirsute, focal
-SUITE=sid
+SUITE=impish
 
 # Which kernel should be built. disables firmware
 # kernelorg: from kernel.org libre: from linux-libre.fsfla.org
